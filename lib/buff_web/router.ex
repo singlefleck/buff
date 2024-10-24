@@ -2,7 +2,6 @@ defmodule BuffWeb.Router do
   use BuffWeb, :router
   import Phoenix.LiveView.Router
 
-
   pipeline :browser do
     plug :accepts, ["html"]
     plug :fetch_session
@@ -20,7 +19,7 @@ defmodule BuffWeb.Router do
     pipe_through :browser
 
     # get "/", PageController, :home
-    live "/",  BuffLive, :home
+    live "/", BuffLive, :home
   end
 
   # Other scopes may use custom stacks.
